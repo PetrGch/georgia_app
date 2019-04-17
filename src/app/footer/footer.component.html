@@ -1,0 +1,53 @@
+<footer class="footer">
+  <div class="footer__content">
+    <div class="footerContent">
+      <div class="footerContent__info">
+        <a routerLink="/">
+          <div [ngStyle]="{ 'color': primaryColorLight, 'border-color': primaryColorLight }">
+            <span>Georgia</span>
+            <span>GO</span>
+          </div>
+        </a>
+        <p>Since 2002, we have been offering travel services of the highest quality, combining our energy and enthusiasm.</p>
+      </div>
+
+      <div class="footerContent__contacts">
+        <div class="footerContentContacts">
+          <span class="footerContentContacts__title">Контактная информация</span>
+          <div class="footerContentContacts__item">
+          <span>
+            <fa name="map-marker"></fa>
+          </span>
+            <p>732/21 Second Street, Manchester,King Street, Kingston United Kingdom</p>
+          </div>
+          <div class="footerContentContacts__item">
+          <span>
+            <fa name="phone"></fa>
+          </span>
+            <a href="tel:111-111-111">111-111-111</a>
+          </div>
+          <div class="footerContentContacts__item">
+          <span>
+            <fa name="envelope"></fa>
+          </span>
+            <a href="mailto:someEmail@gmail.com">someEmail@gmail.com</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footerContent__navBar">
+        <div class="footerContentNavBar">
+          <span class="footerContentNavBar__title">Меню</span>
+          <ul class="footerContentNavBar__menu">
+            <li><a routerLink="/">Главная <span></span></a></li>
+            <li><a routerLink="/tours">Туры <span></span></a></li>
+            <li><a routerLink="">Галлерея <span></span></a></li>
+            <li><a routerLink="">О нас <span></span></a></li>
+            <li><a routerLink="">Контакты <span></span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__copyright">© 2019 Georgia GO. All Rights Reserved.</div>
+</footer>
