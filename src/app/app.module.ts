@@ -8,12 +8,13 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { ToursComponent } from './tours/tours.component';
 import {AngularFontAwesomeModule} from 'angular-font-awesome';
-import { AdvantageComponent } from './advantage/advantage.component';
 import {TopToursComponent} from './home/top-tours/top-tours.component';
 import { TourCardComponent } from './tour-card/tour-card.component';
 import { NavBarComponent } from './header/nav-bar/nav-bar.component';
 import { BannerComponent } from './home/banner/banner.component';
 import { WrapperBoxComponent } from './wrapper-box/wrapper-box.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { AdvantagesComponent } from './home/advantages/advantages.component';
 
 @NgModule({
   declarations: [
@@ -22,12 +23,13 @@ import { WrapperBoxComponent } from './wrapper-box/wrapper-box.component';
     FooterComponent,
     HomeComponent,
     ToursComponent,
-    AdvantageComponent,
     TopToursComponent,
     TourCardComponent,
     NavBarComponent,
     BannerComponent,
-    WrapperBoxComponent
+    WrapperBoxComponent,
+    ContactUsComponent,
+    AdvantagesComponent
   ],
   imports: [
     BrowserModule,
