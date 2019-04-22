@@ -1,0 +1,57 @@
+<nav class="navBar">
+  <ul>
+    <li
+      class="navBar__item"
+      routerLinkActive="navBar__item--active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <a
+        routerLink="/"
+        [style.color]="primaryColorLight"
+      >
+        Главная
+        <span [style.background-color]="primaryColorLight"></span>
+      </a>
+    </li>
+    <li class="navBar__item" routerLinkActive="navBar__item--active">
+      <a
+        routerLink="/tours"
+        routerLinkActive="navBar__item--active"
+        [style.color]="primaryColorLight"
+      >
+        Туры
+        <span [style.background-color]="primaryColorLight"></span>
+      </a>
+    </li>
+    <li class="navBar__item" routerLinkActive="navBar__item--active">
+      <a
+        routerLink="/gallery"
+        routerLinkActive="navBar__item--active"
+        [style.color]="primaryColorLight"
+      >
+        Галлерея
+        <span [style.background-color]="primaryColorLight"></span>
+      </a>
+    </li>
+    <li class="navBar__item"  >
+      <a
+        routerLink="/aboutUs"
+        routerLinkActive="navBar__item--active"
+        [style.color]="primaryColorLight"
+      >
+        О нас
+        <span [style.background-color]="primaryColorLight"></span>
+      </a>
+    </li>
+    <li class="navBar__item" routerLinkActive="navBar__item--active">
+      <a
+        routerLink="/contacts"
+        routerLinkActive="navBar__item--active"
+        [style.color]="primaryColorLight"
+      >
+        Контакты
+        <span [style.background-color]="primaryColorLight"></span>
+      </a>
+    </li>
+  </ul>
+</nav>

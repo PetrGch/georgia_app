@@ -1,51 +1,23 @@
 @import "../util/variables";
 
 .header {
-  --header-primary: @primaryOrangeLight;
-  position: relative;
-  height: 800px;
-
-  &__content, &__navBar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-
-  &__navBar {
-    height: 60px;
-    z-index: 2000;
-  }
-
-  &__content {
-    height: 100%;
-  }
-
-  &__wave {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 80px;
-    transform: rotate(180deg);
-
-    & svg {
-      fill: @primaryOrangeLight;
-    }
-  }
-}
-
-.headerNavBar {
-  position: relative;
+  position: absolute;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100%;
+  height: 60px;
   padding: 0 40px;
   box-sizing: border-box;
-  background-color: @black;
+  background-color: rgba(33, 34, 33, .7);
   box-shadow: 0 4px 10px rgb(33, 34, 33);
+  z-index: 2000;
+
+  &__wrapper {
+    width: 100%;
+  }
 
   &__logo {
     position: absolute;
@@ -69,93 +41,7 @@
     }
   }
 
-  &__menu {
+  &__navBar {
     width: 44%;
-    height: 20px;
-
-    & ul {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      & li {
-        padding: 0 6px;
-
-        & a {
-          position: relative;
-          display: inline-block;
-          font-size: 16px;
-          text-transform: uppercase;
-
-          & span {
-            position: absolute;
-            bottom: -2px;
-            left: 50%;
-            width: 0;
-            height: 1px;
-            transform: translateX(-50%);
-            transition: all 0.2s;
-          }
-
-          &:hover {
-            & span {
-              width: 100%;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-.headerContent {
-  position: relative;
-  width: 100%;
-  height: 100%;
-
-  &__banner {
-    width: 100%;
-    height: 100%;
-    background-image: url("https://i.redd.it/ceebwzyhu7s01.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-y: calc(90% + 26.6px);
-  }
-
-  &__shadow {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.7;
-    background-color: transparent;
-    background-image: linear-gradient(180deg, @black 0%, rgba(242,41,91,0) 100%);
-    background-repeat: no-repeat;
-  }
-
-  &__text {
-    position: absolute;
-    top: 40%;
-    left: 0;
-    width: 100%
-  }
-}
-
-.headerContentText {
-  display: flex;
-  flex-direction: column;
-  color: @primaryOrangeLight;
-  text-align: center;
-
-  &__title {
-    font-size: 60px;
-  }
-
-  &__subTitle {
-    margin-top: 10px;
-    font-size: 22px;
   }
 }

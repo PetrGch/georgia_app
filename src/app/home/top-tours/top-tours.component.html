@@ -1,0 +1,17 @@
+<section class="topTours" [style.background-color]="primaryColor">
+  <div class="topTours__sectionTitle">
+    <h2 [style.background-color]="primaryColor">Лучшие туры Грузии</h2>
+  </div>
+  <div class="topTours__items">
+    <div class="topTour" *ngFor="let tour of tours">
+      <a [routerLink]="['tour', tour.id]">
+        <app-tour-card
+          [title]="tour.title"
+          [subTitle]="tour.subTitle"
+          [description]="tour.description"
+          [imageUrl]="tour.imageUrl"
+        ></app-tour-card>
+      </a>
+    </div>
+  </div>
+</section>

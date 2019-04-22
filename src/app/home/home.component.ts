@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  private primaryColor = '#FFA852';
+  private primaryColorLight = '#FFC994';
+
   constructor() { }
 
   ngOnInit() {
