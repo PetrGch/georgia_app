@@ -19,8 +19,16 @@
         *ngFor="let post of posts"
         [routerLink]="['/news', post.id ]"
       >
-        <app-post [post]="post"></app-post>
+        <app-post
+          [post]="post"
+          [primaryColor]="primaryColor"
+          [primaryColorLight]="primaryColorLight"
+        ></app-post>
       </a>
+    </div>
+
+    <div class="posts__more">
+      Показать все новости
     </div>
   </div>
   <div class="posts__wave posts__wave--bottom">

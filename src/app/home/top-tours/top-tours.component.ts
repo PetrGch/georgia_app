@@ -9,9 +9,9 @@ import {TopToursService} from './top-tours.service';
 })
 export class TopToursComponent implements OnInit {
 
-  @Input('primaryColor')
+  @Input()
   primaryColor: string;
-  @Input('primaryColorLight')
+  @Input()
   primaryColorLight: string;
 
   private tours: TourCard[] = [];

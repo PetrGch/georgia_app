@@ -1,9 +1,18 @@
 <article class="topTour">
-  <div class="topTour__image" [style.background-image]="'url(' + tourImageUrl + ')'"></div>
+  <div class="topTour__image" [style.background-image]="'url(' + tour.imageUrl + ')'"></div>
   <div class="topTour__info">
-    <h3>{{tourTitle}}</h3>
-    <h4>{{tourSubTitle}}</h4>
-    <p>{{tourDescription}}</p>
-    <!--<a>Информация</a>-->
+    <h3>{{ tour.title }}</h3>
+    <h4>{{ tour.subTitle }}</h4>
+    <div class="topTour__price">
+      <span>
+        <strong>Время:</strong>
+        {{ getDurationTime(tour.duration) }}
+      </span>
+      <span>
+        <strong>Цена:</strong>
+        {{ tour.price }}₽
+      </span>
+    </div>
+    <p>{{ tour.description }}</p>
   </div>
 </article>

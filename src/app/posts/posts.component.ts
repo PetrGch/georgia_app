@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {PostsService} from './posts.service';
 import {Post} from './post/post.model';
 
@@ -9,6 +9,10 @@ import {Post} from './post/post.model';
 })
 export class PostsComponent implements OnInit {
 
+  @Input()
+  primaryColor: string;
+  @Input()
+  primaryColorLight: string;
   private posts: Post[] = [];
 
   constructor(private postsService: PostsService) { }

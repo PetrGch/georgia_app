@@ -1,8 +1,14 @@
 <div class="post">
   <div class="post__image" [style.background-image]="'url(' + post.imageUrl + ')'"></div>
   <div class="post__info">
-    <span><strong>By </strong>{{ post.author }}</span>
-    <span><strong>At </strong>{{ formatDate(post.createdAt) }}</span>
+    <span>
+      <strong [style.color]="primaryColor">By:</strong>
+      {{ post.author }}
+    </span>
+    <span>
+      <strong [style.color]="primaryColor">At:</strong>
+      {{ formatDate(post.createdAt) }}
+    </span>
   </div>
   <div class="post__title">
     <h3>{{ post.title }}</h3>

@@ -11,6 +11,10 @@ export class PostComponent implements OnInit {
 
   @Input()
   post: Post;
+  @Input('primaryColor')
+  primaryColor: string;
+  @Input('primaryColorLight')
+  primaryColorLight: string;
 
   constructor() { }
 

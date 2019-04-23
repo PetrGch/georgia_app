@@ -1,4 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, Output} from '@angular/core';
+import {TourCard} from './tour-card.type';
 
 @Component({
   selector: 'app-tour-card',
@@ -7,35 +8,30 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class TourCardComponent implements OnInit {
 
-  private tourTitle: string = null;
-  private tourSubTitle: string = null;
-  private tourDescription: string = null;
-  private tourImageUrl: string = null;
+  @Input()
+  tour: TourCard;
 
   constructor() {
   }
 
-  @Input()
-  set title(inputTitle: string) {
-    this.tourTitle = inputTitle;
-  }
-
-  @Input()
-  set subTitle(inputSubTitle: string) {
-    this.tourSubTitle = inputSubTitle;
-  }
-
-  @Input()
-  set description(inputDescription: string) {
-    this.tourDescription = inputDescription;
-  }
-
-  @Input()
-  set imageUrl(inputImageUrl: string) {
-    this.tourImageUrl = inputImageUrl;
-  }
-
   ngOnInit() {
+  }
+
+  getDurationTime(duration: number): string {
+    if (!duration) {
+      return '';
+    }
+    if (+duration === 1) {
+      return `${duration} день`;
+    }
+    if (+duration > 1 && +duration < 5) {
+      return `${duration} дня`;
+    }
+    if (+duration >= 5) {
+      return `${duration} дней`;
+    }
+
+    return '';
   }
 
 }
