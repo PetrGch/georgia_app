@@ -9,7 +9,8 @@ const routes: Routes = [
   { path: 'tours', component: ToursComponent },
   { path: 'tour/:id', component: HomeComponent },
   { path: 'gallery', component: HomeComponent },
-  { path: 'aboutUs', component: HomeComponent },
+  { path: 'news', component: HomeComponent },
+  { path: 'news/:id', component: HomeComponent },
   { path: 'contacts', component: HomeComponent }
 ];
 

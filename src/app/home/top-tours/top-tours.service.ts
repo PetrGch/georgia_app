@@ -1,5 +1,7 @@
-import {TourCard} from '../../tour-card/tour-card.type';
+import {TourCard} from './tour-card/tour-card.type';
+import {Injectable} from '@angular/core';
 
+// TODO Delete when endpoint will be implemented
 export const MOCK_TOURS: TourCard[] = [
   new TourCard(
     1,
@@ -30,3 +32,17 @@ export const MOCK_TOURS: TourCard[] = [
     'https://www.worldatlas.com/r/w728-h425-c728x425/upload/63/ef/2e/shutterstock-280828427.jpg'
   ),
 ];
+
+@Injectable({
+  providedIn: 'root'
+})
+export class TopToursService {
+
+  constructor() { }
+
+  getTours(): Promise<TourCard[]> {
+    return new Promise((resolve, reject) => {
+      resolve(MOCK_TOURS);
+    });
+  }
+}

@@ -1,17 +1,19 @@
-@import "../util/variables";
+@import "../../../util/variables";
 
 .topTour {
   display: flex;
   width: 100%;
   height: 100%;
   box-sizing: border-box;
+  border: 0 solid transparent;
+  border-radius: 4px;
   background-color: @white;
   cursor: pointer;
   transition: all .2s;
-  box-shadow: 0 0 4px rgba(0,0,0,.5);
+  box-shadow: 0 0 20px -6px rgba(0,0,0,0.24);
 
   &:hover {
-    box-shadow: 0 0 8px rgba(0,0,0,.5);
+    box-shadow: 5px 6px 29px -1px rgba(0,0,0,.24);
   }
 
   &__image, &__info {
@@ -22,6 +24,7 @@
   &__image {
     background-size: cover;
     background-repeat: no-repeat;
+    border-radius: 4px 0 0 4px;
   }
 
   &__info {

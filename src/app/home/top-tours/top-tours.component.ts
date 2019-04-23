@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {TourCard} from '../../tour-card/tour-card.type';
-import {MOCK_TOURS} from './top-tours.mock';
+import {TourCard} from './tour-card/tour-card.type';
+import {TopToursService} from './top-tours.service';
 
 @Component({
   selector: 'app-top-tours',
@@ -14,10 +14,15 @@ export class TopToursComponent implements OnInit {
   @Input('primaryColorLight')
   primaryColorLight: string;
 
-  private tours: TourCard[] = MOCK_TOURS;
+  private tours: TourCard[] = [];
 
-  constructor() { }
+  constructor(private topTourService: TopToursService) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.topTourService.getTours()
+      .then((tours) => {
+        this.tours = tours;
+      });
+  }
 
 }
