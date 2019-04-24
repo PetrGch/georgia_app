@@ -9,10 +9,6 @@ import {Post} from './post/post.model';
 })
 export class PostsComponent implements OnInit {
 
-  @Input()
-  primaryColor: string;
-  @Input()
-  primaryColorLight: string;
   private posts: Post[] = [];
 
   constructor(private postsService: PostsService) { }
@@ -20,7 +16,6 @@ export class PostsComponent implements OnInit {
   ngOnInit() {
     this.postsService.getPosts()
       .then((posts) => {
-        // console.log(posts)
         this.posts = posts;
       });
   }

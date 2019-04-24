@@ -6,6 +6,7 @@ export class TourCard {
   imageUrl: string;
   duration: number;
   price: number;
+  discountPrice: number;
 
   constructor(
     id: number,
@@ -14,7 +15,8 @@ export class TourCard {
     description: string,
     imageUrl: string,
     duration: number,
-    price: number
+    price: number,
+    discountPrice: number
   ) {
     this.id = id;
     this.title = title;
@@ -23,5 +25,6 @@ export class TourCard {
     this.imageUrl = imageUrl;
     this.duration = duration;
     this.price = price;
+    this.discountPrice = discountPrice;
   }
 }

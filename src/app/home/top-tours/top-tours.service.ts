@@ -1,5 +1,6 @@
-import {TourCard} from './tour-card/tour-card.type';
+import {TourCard} from './tour-card/tour-card.model';
 import {Injectable} from '@angular/core';
+import {Subject} from 'rxjs';
 
 // TODO Delete when endpoint will be implemented
 export const MOCK_TOURS: TourCard[] = [
@@ -10,7 +11,8 @@ export const MOCK_TOURS: TourCard[] = [
     'Some long long long long description for this tour',
     'https://www.worldatlas.com/r/w728-h425-c728x425/upload/63/ef/2e/shutterstock-280828427.jpg',
     1,
-    12312
+    12312,
+    null
   ),
   new TourCard(
     2,
@@ -19,7 +21,8 @@ export const MOCK_TOURS: TourCard[] = [
     'Some long long long long description for this tour',
     'https://www.worldatlas.com/r/w728-h425-c728x425/upload/63/ef/2e/shutterstock-280828427.jpg',
     2,
-    12312
+    12312,
+    123
   ),
   new TourCard(
     3,
@@ -28,7 +31,8 @@ export const MOCK_TOURS: TourCard[] = [
     'Some long long long long description for this tour',
     'https://www.worldatlas.com/r/w728-h425-c728x425/upload/63/ef/2e/shutterstock-280828427.jpg',
     3,
-    234
+    234,
+    123
   ),
   new TourCard(
     4,
@@ -37,7 +41,8 @@ export const MOCK_TOURS: TourCard[] = [
     'Some long long long long description for this tour',
     'https://www.worldatlas.com/r/w728-h425-c728x425/upload/63/ef/2e/shutterstock-280828427.jpg',
     4,
-    1233
+    1233,
+    123
   ),
 ];
 
@@ -46,9 +51,18 @@ export const MOCK_TOURS: TourCard[] = [
 })
 export class TopToursService {
 
+  toursLoader = new Subject<TourCard[]>();
+
   constructor() { }
 
-  getTours(): Promise<TourCard[]> {
+  loadTours(): void {
+    this.mockFetch()
+      .then((tours) => {
+        this.toursLoader.next(tours);
+      });
+  }
+
+  mockFetch(): Promise<TourCard[]> {
     return new Promise((resolve, reject) => {
       resolve(MOCK_TOURS);
     });

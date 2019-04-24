@@ -17,6 +17,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AdvantagesComponent } from './home/advantages/advantages.component';
 import { PostsComponent } from './posts/posts.component';
 import { PostComponent } from './posts/post/post.component';
+import { HotToursComponent } from './hot-tours/hot-tours.component';
+import { HotTourComponent } from './hot-tours/hot-tour/hot-tour.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { PostComponent } from './posts/post/post.component';
     ContactUsComponent,
     AdvantagesComponent,
     PostsComponent,
-    PostComponent
+    PostComponent,
+    HotToursComponent,
+    HotTourComponent
   ],
   imports: [
     BrowserModule,

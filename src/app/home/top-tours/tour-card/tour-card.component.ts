@@ -1,5 +1,5 @@
 import {Component, Input, OnInit, Output} from '@angular/core';
-import {TourCard} from './tour-card.type';
+import {TourCard} from './tour-card.model';
 
 @Component({
   selector: 'app-tour-card',

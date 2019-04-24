@@ -4,13 +4,17 @@
     <h3>{{ tour.title }}</h3>
     <h4>{{ tour.subTitle }}</h4>
     <div class="topTour__price">
-      <span>
-        <strong>Время:</strong>
+      <span title="Длительность поездки">
+        <strong>
+          <fa name="clock-o"></fa>
+        </strong>
         {{ getDurationTime(tour.duration) }}
       </span>
-      <span>
-        <strong>Цена:</strong>
-        {{ tour.price }}₽
+      <span title="Стоимость поездки">
+        <strong>
+          <fa name="money"></fa>
+        </strong>
+        {{ tour.price }}₽/человек
       </span>
     </div>
     <p>{{ tour.description }}</p>
