@@ -1,0 +1,106 @@
+@import "../../util/variables";
+
+.hotTour {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  box-shadow: 0 0 20px -6px rgba(0,0,0,0.24);
+  transition: all .2s;
+  background-color: @white;
+  cursor: pointer;
+  overflow: hidden;
+
+  &:after {
+    content: 'АКЦИЯ';
+    position: absolute;
+    top: 44px;
+    right: -50px;
+    width: 200px;
+    height: 20px;
+    line-height: 20px;
+    transform: rotate(45deg);
+    text-align: center;
+    background-color: tomato;
+    color: @white;
+  }
+
+  &__image {
+    width: 100%;
+    height: 200px;
+    border: 1px solid @greyWight;
+    border-radius: 4px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+
+  &__title {
+    margin-top: 20px;
+    font-size: 22px;
+    color: @black;
+    transition: color .2s;
+  }
+
+  &__subTitle {
+    margin-top: 10px;
+    font-size: 16px;
+    color: @greyLight;
+  }
+
+  &__duration {
+    display: block;
+    margin-top: 6px;
+    font-size: 16px;
+    color: @greyLight;
+
+    & strong {
+      font-size: 16px;
+      color: @primaryOrange;
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+    font-size: 16px;
+    color: @greyLight;
+
+    & > strong {
+      margin-right: 6px;
+      font-size: 16px;
+      color: @primaryOrange;
+    }
+
+    & div {
+      display: flex;
+      align-items: center;
+
+      & span {
+        margin-right: 4px;
+        text-decoration: line-through;
+      }
+
+      & strong {
+        margin-right: 4px;
+        font-size: 18px;
+        color: tomato;
+      }
+    }
+  }
+
+  &__text {
+    margin-top: 20px;
+  }
+
+  &:hover {
+    box-shadow: 5px 6px 29px -1px rgba(0,0,0,.24);
+
+    & h3 {
+      color: tomato;
+    }
+  }
+}

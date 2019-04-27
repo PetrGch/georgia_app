@@ -1,3 +1,32 @@
-<div>
-  {{ tour.title }}
+<div class="hotTour">
+  <div class="hotTour__image" [style.background-image]="'url(' + tour.imageUrl + ')'"></div>
+  <h3 class="hotTour__title">
+    {{ tour.title }}
+  </h3>
+  <h4 class="hotTour__subTitle">
+    {{ tour.subTitle }}
+  </h4>
+
+  <span
+    title="Длительность поездки"
+    class="hotTour__duration"
+  >
+    <strong>
+      <fa name="clock-o"></fa>
+    </strong>
+    {{ getDurationTime(tour.duration) }}
+  </span>
+  <div class="hotTour__price" title="Стоимость поездки со скидкой">
+    <strong>
+      <fa name="money"></fa>
+    </strong>
+    <div>
+      <span>{{ tour.price }} </span>
+      <strong>{{ tour.discountPrice }}</strong> ₽/человек
+    </div>
+  </div>
+
+  <div class="hotTour__text">
+    <p>{{ tour.description }}</p>
+  </div>
 </div>

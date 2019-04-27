@@ -1,0 +1,25 @@
+<div class="subscribe__wrapper">
+  <div class="subscribe__shadow"></div>
+  <div class="subscribe">
+    <h3>Subscribe to our mailing list</h3>
+    <h4>BE THE FIRST TO GET LATEST NEWS AND OFFERS!</h4>
+    <form
+      class="subscribeForm"
+      [formGroup]="subscribeForm"
+      (ngSubmit)="onSubscribeFormSubmit()"
+    >
+      <div class="subscribeForm__emailInput {{ !isEmailFieldValid ? 'subscribeForm__emailInput--invalid' : '' }}">
+        <input
+          type="text"
+          placeholder="Your Email"
+          formControlName="email"
+        >
+      </div>
+
+      <button
+        class="subscribeForm__submitButton"
+        type="submit"
+      >ПОДПИСАТЬСЯ</button>
+    </form>
+  </div>
+</div>
