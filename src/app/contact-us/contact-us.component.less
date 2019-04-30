@@ -1,12 +1,136 @@
 @import "../util/variables";
 
 .contactUs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  height: 200px;
+  height: 150px;
   padding: 40px;
   border-top: 1px solid @greyWight;
+  box-sizing: border-box;
 
   &__wrapper {
     width: 100%;
+    background-color: @greyDark;
+  }
+
+  &__text {
+    font-size: 22px;
+    font-weight: 300;
+    color: @greyLight;
+  }
+
+  &__button {
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    border: 1px solid @primaryOrange;
+    border-radius: 30px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: @white;
+    background-color: @primaryOrange;
+    cursor: pointer;
+    transition: all .2s;
+
+    &:hover {
+      background-color: @greyDark;
+    }
+  }
+}
+
+.contactUsModalWindow {
+  position: relative;
+  min-width: 600px;
+
+  &__cross {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 16px;
+    font-weight: 300;
+    cursor: pointer;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 300;
+  }
+
+  &__subTitle {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: @greyLight;
+  }
+
+  &__form {
+    padding-top: 40px;
+  }
+}
+
+.contactUsModalWindowForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__input {
+    width: 380px;
+    height: 50px;
+    margin-bottom: 20px;
+
+    & input {
+      width: 100%;
+      height: 100%;
+      padding: 0 20px;
+      border: 1px solid @primaryOrange;
+      border-radius: 50px;
+      box-sizing: border-box;
+      font-size: 20px;
+      color: @greyLight;
+      background-color: rgba(255, 255, 255, 0.9);
+      outline: none;
+    }
+
+    &--invalid {
+      position: relative;
+
+      & input {
+        border: 1px solid tomato;
+      }
+
+      &:after {
+        content: 'Некоректные данные!';
+        position: absolute;
+        top: 6px;
+        right: 26px;
+        color: tomato;
+        font-size: 10px;
+      }
+    }
+  }
+
+  &__submitButton {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 20px;
+    border: 1px solid @primaryOrange;
+    border-radius: 50px;
+    background-color: @primaryOrange;
+    outline: none;
+    font-size: 12px;
+    font-weight: 700;
+    color: @white;
+    cursor: pointer;
+    transition: all .2s;
+
+    &:hover {
+      background-color: @greyDark;
+    }
   }
 }

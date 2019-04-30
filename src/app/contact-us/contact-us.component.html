@@ -1,5 +1,56 @@
 <div class="contactUs__wrapper">
   <div class="contactUs">
-
+    <span class="contactUs__text">Не жди больше. Свяжишь с нами!</span>
+    <div
+      class="contactUs__button"
+      (click)="openModal('contactUs')"
+    >
+      СВЯЗАТЬСЯ
+    </div>
   </div>
 </div>
+
+<app-modal-window id="contactUs" *ngIf="contactUsId">
+  <div class="contactUsModalWindow">
+    <span
+      class="contactUsModalWindow__cross"
+      (click)="closeModal('contactUs')"
+    >
+      <fa name="times"></fa>
+    </span>
+    <h3 class="contactUsModalWindow__title">
+      Запросить обратный звонок
+    </h3>
+    <h4 class="contactUsModalWindow__subTitle">
+      Мы свяжимся с вами в течении 30 секунд
+    </h4>
+
+    <div class="contactUsModalWindow__form">
+      <form
+        class="contactUsModalWindowForm"
+        [formGroup]="callBackForm"
+        (ngSubmit)="onCallBackFormSubmit('contactUs')"
+      >
+        <div class="contactUsModalWindowForm__input">
+          <input
+            type="text"
+            placeholder="Имя"
+            formControlName="name"
+          >
+        </div>
+        <div class="contactUsModalWindowForm__input  {{ !isPhoneFieldValid ? 'contactUsModalWindowForm__input--invalid' : '' }}">
+          <input
+            type="text"
+            placeholder="Телефон"
+            formControlName="phone"
+          >
+        </div>
+
+        <button
+          class="contactUsModalWindowForm__submitButton"
+          type="submit"
+        >ЗАПРОСИТЬ</button>
+      </form>
+    </div>
+  </div>
+</app-modal-window>

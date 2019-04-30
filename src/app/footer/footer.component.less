@@ -11,7 +11,7 @@
   }
 
   &__copyright {
-    padding-top: 20px;
+    padding: 20px 0;
     border-top: 1px solid @greyWight;
     font-size: 12px;
     color: @greyLight;
@@ -76,6 +76,7 @@
 
   &__item {
     display: flex;
+    align-items: center;
     margin-top: 20px;
 
     & span {
@@ -90,6 +91,11 @@
     & a {
       color: @greyLight;
       text-decoration: underline;
+      transition: color .2s;
+
+      &:hover {
+        color: @primaryOrange;
+      }
     }
   }
 }
@@ -128,8 +134,11 @@
         }
 
         &:hover {
+          color: @primaryOrange;
+
           & span {
             width: 100%;
+            background-color: @primaryOrange;
           }
         }
       }

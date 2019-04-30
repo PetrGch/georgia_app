@@ -15,14 +15,11 @@ export class SubscribeComponent implements OnInit {
 
   ngOnInit() {
     this.subscribeForm = new FormGroup({
-      email: new FormControl(null, [Validators.required, Validators.email])
+      email: new FormControl(null, [this.isRequiredValidation.bind(this), Validators.email])
     });
   }
 
   onSubscribeFormSubmit() {
-    console.log(this.isEmailFieldValid)
-    console.log(this.subscribeForm.get('email').errors)
-    console.log(this.subscribeForm.get('email').touched)
     if (this.subscribeForm.get('email').errors) {
       this.isEmailFieldValid = false;
     } else {
@@ -32,7 +29,6 @@ export class SubscribeComponent implements OnInit {
   }
 
   isRequiredValidation(control: FormControl): {[key: string]: boolean} {
-    // console.log(control)
     if (!control.value) {
       return { isRequired: true};
     }

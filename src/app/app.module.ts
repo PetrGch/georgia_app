@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +21,7 @@ import { PostComponent } from './posts/post/post.component';
 import { HotToursComponent } from './hot-tours/hot-tours.component';
 import { HotTourComponent } from './hot-tours/hot-tour/hot-tour.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
+import { ModalWindowComponent } from './modal-window/modal-window.component';
 
 @NgModule({
   declarations: [
@@ -40,10 +41,12 @@ import { SubscribeComponent } from './subscribe/subscribe.component';
     PostComponent,
     HotToursComponent,
     HotTourComponent,
-    SubscribeComponent
+    SubscribeComponent,
+    ModalWindowComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     AngularFontAwesomeModule,
     ReactiveFormsModule
