@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {TourCard} from '../../home/top-tours/tour-card/tour-card.model';
+import {TourCard} from '../../tour-card/tour-card.model';
 
 @Component({
   selector: 'app-hot-tour',

@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  title = 'georgia-app';
+  onActivate() {
+    if (window) {
+      window.scrollTo(0, 0);
+    }
+  }
 }

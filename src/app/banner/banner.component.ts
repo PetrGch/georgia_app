@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, ViewChild} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-banner',
@@ -7,11 +7,15 @@ import {Component, Input, OnInit, ViewChild} from '@angular/core';
 })
 export class BannerComponent implements OnInit {
 
-  imageUrl = 'https://i.redd.it/ceebwzyhu7s01.jpg';
+  @Input()
+  imageUrl;
+  @Input()
+  title;
 
   constructor() { }
 
   ngOnInit() {
+    console.log(this.imageUrl);
   }
 
 }

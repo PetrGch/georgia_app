@@ -1,7 +1,8 @@
-import {Component, Input, OnDestroy, OnInit} from '@angular/core';
-import {TourCard} from './tour-card/tour-card.model';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {SubscriptionLike} from 'rxjs';
+
+import {TourCard} from '../../tour-card/tour-card.model';
 import {TopToursService} from './top-tours.service';
-import {Subscribable, Subscriber, SubscriptionLike} from 'rxjs';
 
 @Component({
   selector: 'app-top-tours',
@@ -18,7 +19,7 @@ export class TopToursComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.topTourService.loadTours();
     this.toursLoader = this.topTourService.toursLoader.subscribe((tours: TourCard[]) => {
-      this.tours = tours.slice();
+      this.tours = tours.slice(0, 4);
     });
   }
 

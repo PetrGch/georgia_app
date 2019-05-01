@@ -1,6 +1,6 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {TopToursService} from '../home/top-tours/top-tours.service';
-import {TourCard} from '../home/top-tours/tour-card/tour-card.model';
+import {TourCard} from '../tour-card/tour-card.model';
 import {Subject, Subscriber} from 'rxjs';
 import {Observable} from 'rxjs/src/internal/Observable';
 import {SubscriptionLike} from 'rxjs/src/internal/types';

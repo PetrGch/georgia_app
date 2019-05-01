@@ -10,9 +10,9 @@ import { HomeComponent } from './home/home.component';
 import { ToursComponent } from './tours/tours.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { TopToursComponent } from './home/top-tours/top-tours.component';
-import { TourCardComponent } from './home/top-tours/tour-card/tour-card.component';
+import { TourCardComponent } from './tour-card/tour-card.component';
 import { NavBarComponent } from './header/nav-bar/nav-bar.component';
-import { BannerComponent } from './home/banner/banner.component';
+import { HomeBannerComponent } from './home/home-banner/home-banner.component';
 import { WrapperBoxComponent } from './wrapper-box/wrapper-box.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AdvantagesComponent } from './home/advantages/advantages.component';
@@ -24,6 +24,8 @@ import { SubscribeComponent } from './subscribe/subscribe.component';
 import { ModalWindowComponent } from './modal-window/modal-window.component';
 import { ToursListComponent } from './tours/tours-list/tours-list.component';
 import { ToursListItemComponent } from './tours/tours-list/tours-list-item/tours-list-item.component';
+import { BannerComponent } from './banner/banner.component';
+import { SingleTourComponent } from './single-tour/single-tour.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,7 @@ import { ToursListItemComponent } from './tours/tours-list/tours-list-item/tours
     TopToursComponent,
     TourCardComponent,
     NavBarComponent,
-    BannerComponent,
+    HomeBannerComponent,
     WrapperBoxComponent,
     ContactUsComponent,
     AdvantagesComponent,
@@ -46,7 +48,9 @@ import { ToursListItemComponent } from './tours/tours-list/tours-list-item/tours
     SubscribeComponent,
     ModalWindowComponent,
     ToursListComponent,
-    ToursListItemComponent
+    ToursListItemComponent,
+    BannerComponent,
+    SingleTourComponent
   ],
   imports: [
     BrowserModule,

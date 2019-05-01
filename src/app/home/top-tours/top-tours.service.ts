@@ -1,4 +1,4 @@
-import {TourCard} from './tour-card/tour-card.model';
+import {TourCard} from '../../tour-card/tour-card.model';
 import {Injectable} from '@angular/core';
 import {Subject} from 'rxjs';
 
@@ -44,6 +44,26 @@ export const MOCK_TOURS: TourCard[] = [
     1233,
     123
   ),
+  new TourCard(
+    5,
+    'Tour 5',
+    'This is tour 5',
+    'Some long long long long description for this tour',
+    'https://www.worldatlas.com/r/w728-h425-c728x425/upload/63/ef/2e/shutterstock-280828427.jpg',
+    4,
+    1233,
+    123
+  ),
+  new TourCard(
+    6,
+    'Tour 6',
+    'This is tour 4',
+    'Some long long long long description for this tour',
+    'https://www.worldatlas.com/r/w728-h425-c728x425/upload/63/ef/2e/shutterstock-280828427.jpg',
+    6,
+    1233,
+    123
+  )
 ];
 
 @Injectable({
