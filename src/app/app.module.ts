@@ -22,6 +22,8 @@ import { HotToursComponent } from './hot-tours/hot-tours.component';
 import { HotTourComponent } from './hot-tours/hot-tour/hot-tour.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
 import { ModalWindowComponent } from './modal-window/modal-window.component';
+import { ToursListComponent } from './tours/tours-list/tours-list.component';
+import { ToursListItemComponent } from './tours/tours-list/tours-list-item/tours-list-item.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { ModalWindowComponent } from './modal-window/modal-window.component';
     HotToursComponent,
     HotTourComponent,
     SubscribeComponent,
-    ModalWindowComponent
+    ModalWindowComponent,
+    ToursListComponent,
+    ToursListItemComponent
   ],
   imports: [
     BrowserModule,
