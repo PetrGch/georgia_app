@@ -1,0 +1,17 @@
+<div class="tourPlace">
+  <div class="tourPlace__image {{setOddEvenPrefix('tourPlace__image')}}">
+    <img src="{{place.imageUrl}}" alt="{{place.title}}">
+  </div>
+  <h3 class="tourPlace__title {{setOddEvenPrefix('tourPlace__title')}}">
+    {{ place.title }}
+  </h3>
+  <h4 class="tourPlace__subTitle {{setOddEvenPrefix('tourPlace__subTitle')}}">
+    {{ place.subTitle }}
+  </h4>
+  <div class="tourPlace__duration {{setOddEvenPrefix('tourPlace__duration')}}">
+    <span><strong>Длительность: </strong>{{ getDurationTime() }}</span>
+  </div>
+  <p class="tourPlace__description {{setOddEvenPrefix('tourPlace__description')}}">
+    {{ place.description }}
+  </p>
+</div>

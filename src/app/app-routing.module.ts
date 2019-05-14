@@ -8,7 +8,7 @@ import {SingleTourComponent} from './single-tour/single-tour.component';
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
   { path: 'tours', component: ToursComponent },
-  { path: 'tour/:id', component: SingleTourComponent },
+  { path: 'tours/:id', component: SingleTourComponent },
   { path: 'gallery', component: HomeComponent },
   { path: 'news', component: HomeComponent },
   { path: 'news/:id', component: HomeComponent },

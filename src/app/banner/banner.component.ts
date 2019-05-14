@@ -11,11 +11,11 @@ export class BannerComponent implements OnInit {
   imageUrl;
   @Input()
   title;
+  @Input()
+  subTitle;
 
   constructor() { }
 
-  ngOnInit() {
-    console.log(this.imageUrl);
-  }
+  ngOnInit() {}
 
 }

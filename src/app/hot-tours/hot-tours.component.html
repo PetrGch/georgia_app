@@ -22,7 +22,7 @@
       <a
         class="hotTours__contentItem"
         *ngFor="let tour of tours"
-        [routerLink]="['/tour', tour.id ]"
+        [routerLink]="['/tours', tour.id ]"
       >
         <app-hot-tour [tour]="tour"></app-hot-tour>
       </a>

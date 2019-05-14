@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {TourCard} from '../../tour-card/tour-card.model';
+import {timeDurationFormatter} from '../../util/formatter';
 
 @Component({
   selector: 'app-hot-tour',
@@ -17,20 +18,7 @@ export class HotTourComponent implements OnInit {
   }
 
   getDurationTime(duration: number): string {
-    if (!duration) {
-      return '';
-    }
-    if (+duration === 1) {
-      return `${duration} день`;
-    }
-    if (+duration > 1 && +duration < 5) {
-      return `${duration} дня`;
-    }
-    if (+duration >= 5) {
-      return `${duration} дней`;
-    }
-
-    return '';
+    return timeDurationFormatter(duration);
   }
 
 }

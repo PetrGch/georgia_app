@@ -19,7 +19,7 @@
     </div>
     <div class="topTours__items">
       <div class="topTour" *ngFor="let tour of tours">
-        <a [routerLink]="['/tour', tour.id]">
+        <a [routerLink]="['/tours', tour.id]">
           <app-tour-card
             [tour]="tour"
           ></app-tour-card>

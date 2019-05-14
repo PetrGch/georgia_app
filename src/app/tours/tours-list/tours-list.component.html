@@ -16,7 +16,7 @@
   <div class="toursList">
     <div class="toursList__items">
       <div class="toursListItem" *ngFor="let tour of tours">
-        <a [routerLink]="['/tour', tour.id]">
+        <a [routerLink]="['/tours', tour.id]">
           <app-tour-card
             [tour]="tour"
           ></app-tour-card>

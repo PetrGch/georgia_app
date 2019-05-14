@@ -26,6 +26,11 @@ import { ToursListComponent } from './tours/tours-list/tours-list.component';
 import { ToursListItemComponent } from './tours/tours-list/tours-list-item/tours-list-item.component';
 import { BannerComponent } from './banner/banner.component';
 import { SingleTourComponent } from './single-tour/single-tour.component';
+import { TourPlaceComponent } from './single-tour/tour-place/tour-place.component';
+import { AgmCoreModule } from '@agm/core';
+import { MapComponent } from './map/map.component';
+import { AgmDirectionModule } from 'agm-direction';
+import { MapDirectionComponent } from './map/map-direction/map-direction.component';
 
 @NgModule({
   declarations: [
@@ -50,14 +55,22 @@ import { SingleTourComponent } from './single-tour/single-tour.component';
     ToursListComponent,
     ToursListItemComponent,
     BannerComponent,
-    SingleTourComponent
+    SingleTourComponent,
+    TourPlaceComponent,
+    MapComponent,
+    MapDirectionComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     AngularFontAwesomeModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AgmCoreModule
+      .forRoot({
+      apiKey: 'AIzaSyAQyqwW9u7Og3kWUb416ElshOWFrahUzpA'
+    }),
+    AgmDirectionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

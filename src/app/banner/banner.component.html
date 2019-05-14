@@ -5,5 +5,9 @@
   <div class="banner__shadow"></div>
   <div class="banner">
     <h1 class="banner__title">{{ title }}</h1>
+    <h2
+      *ngIf="subTitle"
+      class="banner__subTitle"
+    >{{ subTitle }}</h2>
   </div>
 </div>
