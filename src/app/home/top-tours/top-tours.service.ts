@@ -83,7 +83,7 @@ export class TopToursService {
   }
 
   mockFetch(): Promise<TourCard[]> {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       resolve(MOCK_TOURS);
     });
   }

@@ -1,0 +1,61 @@
+@import "../../util/variables";
+
+.placesList {
+  width: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    background-color: #f5f5f5;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+
+  &__wave {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+
+    &--top {
+      top: -38px;
+      height: 38px;
+
+      & svg {
+        width: 100%;
+        height: 100%;
+        transform: rotate(180deg);
+        fill: #f5f5f5;
+      }
+    }
+
+    &--bottom {
+      bottom: -30px;
+      height: 30px;
+
+      & svg {
+        width: 100%;
+        height: 100%;
+        fill: #f5f5f5;
+      }
+    }
+  }
+}
+
+.placesListItem {
+  width: 31%;
+  height: 400px;
+  padding: 10px 0;
+  box-sizing: border-box;
+
+  & a {
+    outline: none;
+  }
+}

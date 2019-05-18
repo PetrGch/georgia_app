@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
 
 import {Place} from '../single-tour.model';
 import {timeDurationFormatter} from '../../util/formatter';
@@ -6,7 +6,8 @@ import {timeDurationFormatter} from '../../util/formatter';
 @Component({
   selector: 'app-tour-place',
   templateUrl: './tour-place.component.html',
-  styleUrls: ['./tour-place.component.less']
+  styleUrls: ['./tour-place.component.less'],
+  encapsulation: ViewEncapsulation.None
 })
 export class TourPlaceComponent implements OnInit {
 

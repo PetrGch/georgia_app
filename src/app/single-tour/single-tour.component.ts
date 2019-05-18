@@ -4,6 +4,7 @@ import {Place, SingleTour} from './single-tour.model';
 import {SubscriptionLike} from 'rxjs';
 import {timeDurationFormatter} from '../util/formatter';
 import {MapMarker} from '../map/map.component';
+import {ActivatedRoute, Params} from '@angular/router';
 
 @Component({
   selector: 'app-single-tour',
@@ -16,10 +17,13 @@ export class SingleTourComponent implements OnInit, OnDestroy {
   singleTourLoader: SubscriptionLike;
   markers: MapMarker[];
 
-  constructor(private singleTourService: SingleTourService) { }
+  constructor(private singleTourService: SingleTourService,
+              private router: ActivatedRoute) { }
 
   ngOnInit() {
-    this.singleTourService.loadSingleTour();
+    this.router.params.subscribe((data: Params) => {
+      this.singleTourService.loadSingleTour(data.id);
+    });
     this.singleTourLoader = this.singleTourService.singleTourLoader
       .subscribe((singleTour: SingleTour) => {
         this.singleTour = singleTour;

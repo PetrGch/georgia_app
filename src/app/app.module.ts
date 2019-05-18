@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AgmCoreModule } from '@agm/core';
+import { AgmDirectionModule } from 'agm-direction';
+import { MarkdownModule } from 'ngx-markdown';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,14 +26,14 @@ import { HotTourComponent } from './hot-tours/hot-tour/hot-tour.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
 import { ModalWindowComponent } from './modal-window/modal-window.component';
 import { ToursListComponent } from './tours/tours-list/tours-list.component';
-import { ToursListItemComponent } from './tours/tours-list/tours-list-item/tours-list-item.component';
 import { BannerComponent } from './banner/banner.component';
 import { SingleTourComponent } from './single-tour/single-tour.component';
 import { TourPlaceComponent } from './single-tour/tour-place/tour-place.component';
-import { AgmCoreModule } from '@agm/core';
 import { MapComponent } from './map/map.component';
-import { AgmDirectionModule } from 'agm-direction';
 import { MapDirectionComponent } from './map/map-direction/map-direction.component';
+import { PlacesComponent } from './places/places.component';
+import { PlacesListComponent } from './places/places-list/places-list.component';
+import { PlaceCardComponent } from './place-card/place-card.component';
 
 @NgModule({
   declarations: [
@@ -53,12 +56,14 @@ import { MapDirectionComponent } from './map/map-direction/map-direction.compone
     SubscribeComponent,
     ModalWindowComponent,
     ToursListComponent,
-    ToursListItemComponent,
     BannerComponent,
     SingleTourComponent,
     TourPlaceComponent,
     MapComponent,
-    MapDirectionComponent
+    MapDirectionComponent,
+    PlacesComponent,
+    PlacesListComponent,
+    PlaceCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -70,7 +75,8 @@ import { MapDirectionComponent } from './map/map-direction/map-direction.compone
       .forRoot({
       apiKey: 'AIzaSyAQyqwW9u7Og3kWUb416ElshOWFrahUzpA'
     }),
-    AgmDirectionModule
+    AgmDirectionModule,
+    MarkdownModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

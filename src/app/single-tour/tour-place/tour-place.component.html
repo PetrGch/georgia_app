@@ -11,7 +11,12 @@
   <div class="tourPlace__duration {{setOddEvenPrefix('tourPlace__duration')}}">
     <span><strong>Длительность: </strong>{{ getDurationTime() }}</span>
   </div>
-  <p class="tourPlace__description {{setOddEvenPrefix('tourPlace__description')}}">
-    {{ place.description }}
-  </p>
+  <div class="tourPlace__description {{setOddEvenPrefix('tourPlace__description')}}">
+    <markdown markdown ngPreserveWhitespaces class="tourPlace__description">
+      {{ place.description }}
+    </markdown>
+  </div>
+  <div class="tourPlace__moreInfo">
+    <a [routerLink]="['/places', place.id]">УЗНАТЬ БКОЛЬШЕ</a>
+  </div>
 </div>

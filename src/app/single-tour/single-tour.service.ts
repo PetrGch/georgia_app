@@ -20,7 +20,18 @@ export const MOCK_TOURS: SingleTour = new SingleTour(
       'This is Place 1',
       `Some long long long long description for this tourSome long long long long description for this tourSome long long long
        long description for this tourSome long long long long description for this tour Some long long long long description for this
-        tourSome long long long long description for this tourSome long long long long description for this tourSome long long long long
+        tourSome long long
+        
+        
+         [I'm an inline-style link](https://www.google.com)
+         
+         | Tables        | Are           | Cool  |
+         | ------------- |:-------------:| -----:|
+         | col 3 is      | right-aligned | $1600 |
+         | col 2 is      | centered      |   $12 |
+         | zebra stripes | are neat      |    $1 |
+         
+         long long description for this tourSome long long long long description for this tourSome long long long long
          description for this tourSome long long long long description for this tour Some long long long long description for this tourSome
           long long long long description for this tourSome long long long long description for this tourSome long long long long
            description for this tourSome long long long long description for this tourSome long long long long description for this
@@ -83,7 +94,8 @@ export class SingleTourService {
 
   constructor() { }
 
-  loadSingleTour(): void {
+  loadSingleTour(tourId: number): void {
+    console.log(tourId)
     this.mockFetch()
       .then((singleTour: SingleTour) => {
         this.mapPlacesToMarkers(singleTour.places);

@@ -1,13 +1,13 @@
 @import "../../util/variables";
 
 .tourPlace {
+  padding-bottom: 10px;
   overflow: hidden;
 
   &__image {
     width: 50%;
     padding-top: 20px;
     padding-bottom: 20px;
-    padding-right: 40px;
     box-sizing: border-box;
     overflow: hidden;
 
@@ -18,10 +18,12 @@
 
     &--odd {
       float: right;
+      padding-left: 40px;
     }
 
     &--even {
       float: left;
+      padding-right: 40px;
     }
   }
 
@@ -55,8 +57,12 @@
   }
 
   &__description {
-    line-height: 1.6;
+    line-height: 1.4;
     color: @greyDark;
+
+    & p, & a {
+      line-height: 1.4;
+    }
 
     &--even {
       margin-top: 190px;
@@ -64,6 +70,44 @@
 
     &--odd {
       margin-top: 40px;
+    }
+  }
+
+  &__moreInfo {
+    clear: both;
+    margin-top: 20px;
+    text-align: center;
+
+    & a {
+      position: relative;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: @primaryOrange;
+      cursor: pointer;
+      transition: all .2s;
+
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 50%;
+        width: 0;
+        height: 1px;
+        background-color: @white;
+        transform: translateX(-50%);
+        transition: all 0.2s;
+      }
+
+      &:hover {
+        & a {
+          color: @primaryOrange;
+        }
+
+        &:before {
+          width: 100%;
+          background-color: @primaryOrange;
+        }
+      }
     }
   }
 }

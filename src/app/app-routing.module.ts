@@ -4,14 +4,16 @@ import { Routes, RouterModule } from '@angular/router';
 import {HomeComponent} from './home/home.component';
 import {ToursComponent} from './tours/tours.component';
 import {SingleTourComponent} from './single-tour/single-tour.component';
+import {PlacesComponent} from './places/places.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
   { path: 'tours', component: ToursComponent },
   { path: 'tours/:id', component: SingleTourComponent },
+  { path: 'places', component: PlacesComponent },
+  { path: 'places/:id', component: ToursComponent },
   { path: 'gallery', component: HomeComponent },
   { path: 'news', component: HomeComponent },
-  { path: 'news/:id', component: HomeComponent },
   { path: 'contacts', component: HomeComponent }
 ];
 
