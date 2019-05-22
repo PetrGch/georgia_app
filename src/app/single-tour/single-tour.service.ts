@@ -117,10 +117,8 @@ export class SingleTourService {
         place.latitude,
         place.longitude,
         place.title,
-        place.description,
         place.imageUrl
       );
     });
   }
-
 }

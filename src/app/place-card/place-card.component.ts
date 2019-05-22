@@ -13,8 +13,6 @@ export class PlaceCardComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-    console.log(this.place)
-  }
+  ngOnInit() {}
 
 }

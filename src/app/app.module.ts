@@ -34,6 +34,8 @@ import { MapDirectionComponent } from './map/map-direction/map-direction.compone
 import { PlacesComponent } from './places/places.component';
 import { PlacesListComponent } from './places/places-list/places-list.component';
 import { PlaceCardComponent } from './place-card/place-card.component';
+import { SinglePlaceComponent } from './single-place/single-place.component';
+import { MapMarkerComponent } from './map/map-marker/map-marker.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +66,8 @@ import { PlaceCardComponent } from './place-card/place-card.component';
     PlacesComponent,
     PlacesListComponent,
     PlaceCardComponent,
+    SinglePlaceComponent,
+    MapMarkerComponent,
   ],
   imports: [
     BrowserModule,

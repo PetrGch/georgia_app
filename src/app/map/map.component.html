@@ -1,19 +1,20 @@
-<agm-map [latitude]="latitude" [longitude]="longitude">
-  <app-map-direction
-    *ngFor="let marker of markers; let index = index"
-    [originMarker]="marker"
-    [destinationMarker]="markers[index + 1] || markers[0]"
-  ></app-map-direction>
-</agm-map>
+<agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="13">
+  <div
+    *ngIf="!isMarkerMode"
+  >
+    <app-map-direction
+      *ngFor="let marker of markers; let index = index"
+      [originMarker]="marker"
+      [destinationMarker]="markers[index + 1] || markers[0]"
+    ></app-map-direction>
+  </div>
 
-<!--<agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="13">-->
-  <!--<agm-marker-->
-    <!--[latitude]="latitude"-->
-    <!--[longitude]="longitude"-->
-    <!--[iconUrl]="iconUrl"-->
-  <!--&gt;-->
-    <!--<agm-info-window>-->
-      <!--Hi, this is the content of the <strong>info window</strong>-->
-    <!--</agm-info-window>-->
-  <!--</agm-marker>-->
-<!--</agm-map>-->
+  <div
+    *ngIf="isMarkerMode"
+  >
+    <app-map-marker
+      *ngFor="let marker of markers"
+      [marker]="marker"
+    ></app-map-marker>
+  </div>
+</agm-map>

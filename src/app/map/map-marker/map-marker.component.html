@@ -1,0 +1,14 @@
+<agm-marker
+  [latitude]="marker.latitude"
+  [longitude]="marker.longitude"
+  [iconUrl]="'assets/park.png'"
+>
+  <agm-info-window>
+    <div class="markerOption">
+      <div class="markerOption__image">
+        <img src="{{marker.imageUrl}}" alt="{{marker.title}}">
+      </div>
+      <h5 class="markerOption__title">{{marker.title}}</h5>
+    </div>
+  </agm-info-window>
+</agm-marker>
