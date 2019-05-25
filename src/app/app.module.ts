@@ -4,6 +4,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AgmCoreModule } from '@agm/core';
 import { AgmDirectionModule } from 'agm-direction';
 import { MarkdownModule } from 'ngx-markdown';
+import { CrystalGalleryModule } from 'ngx-crystal-gallery';
+// import {CrystalLightboxModule} from '@crystalui/angular-lightbox';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -36,6 +38,10 @@ import { PlacesListComponent } from './places/places-list/places-list.component'
 import { PlaceCardComponent } from './place-card/place-card.component';
 import { SinglePlaceComponent } from './single-place/single-place.component';
 import { MapMarkerComponent } from './map/map-marker/map-marker.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { GalleryListComponent } from './gallery/gallery-list/gallery-list.component';
+import { SingleGalleryComponent } from './single-gallery/single-gallery.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -68,6 +74,10 @@ import { MapMarkerComponent } from './map/map-marker/map-marker.component';
     PlaceCardComponent,
     SinglePlaceComponent,
     MapMarkerComponent,
+    GalleryComponent,
+    GalleryListComponent,
+    SingleGalleryComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
@@ -81,6 +91,8 @@ import { MapMarkerComponent } from './map/map-marker/map-marker.component';
     }),
     AgmDirectionModule,
     MarkdownModule.forRoot(),
+    // CrystalLightboxModule,
+    CrystalGalleryModule
   ],
   providers: [],
   bootstrap: [AppComponent]
